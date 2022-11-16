@@ -1,65 +1,65 @@
-*{
-    background-color: hsl(212, 45%, 89%);
-    border-radius: 30px;
+@import url(https://fonts.googleapis.com/css?family=Outfit);
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-div{
-    background-color: white;
+html {
+    box-sizing: border-box;
 }
-#outerbox{
-    /* border: 2px solid red; */
-    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.8);
-    width: 300px;
-    height: 1200px
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    background-color: var(--light-gray);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-#qrimage{
-    padding-top: 15px;
-    display: flex;
-    justify-content: center;
-}
-div > img{
-    /* border: 2px solid red; */
-    background-color: white;
-    width: 85%;
-    height: 85%;
-    object-fit: cover;
-    border-radius: 20px;
-    padding: 2.5px;
-}
-
-p{
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: (100vh - 1px);
+    margin: 1.25rem;
+}
+
+.container{
+    background-color: var(--white);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.container img{
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+
+.container h1{
+    color: var(--dark-blue);
     text-align: center;
-    padding: 15px;
-    font-family: "Outfit";
-    /* border: 2px solid red; */
-    background-color: white;
-    font-size: 15px;
-    color: hsl(220, 15%, 55%);;
+    margin-bottom: 1rem;
 }
 
-p:first-child{
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+.container p{
+    color: var(--grayish-blue);
+    text-align: center;
 }
 
-p:last-child{
-    margin-top: 0px;
+@media (min-width: 500px){
+    .container{
+        width: 400px;
+    }
 }
